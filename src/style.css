@@ -19,7 +19,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 11%;
+    margin-top: 9%;
+    padding-bottom: 1rem;
 }
 
 .todo-box {
@@ -85,7 +86,7 @@ main {
 }
 
 .checkbox {
-    display: none;
+    display: inline-block;
 }
 
 .delete {
@@ -96,6 +97,7 @@ main {
     font-weight: 600;
     outline: none;
     border: none;
+    cursor: pointer;
     transition: 1s;
 }
 
