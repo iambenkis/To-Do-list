@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f1f2f5;
+}
+
+i {
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 15%;
+}
+
+.todo-box {
+    background-color: #fff;
+    width: 45%;
+    position: relative;
+}
+
+.todo-header { 
+    display: flex; 
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.todo-header p {
+    color: #222;
+    font-weight: 600;
+}
+
+.todo-input {
+    position: relative; 
+}
+
+.todo-input input{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    outline: none; 
+    color: #272727;
+}
+
+.todo-input i {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.task i,
+.task input {
+    cursor: pointer;
+}
+
+.task .line{
+    text-decoration: line-through;
+    text-decoration-color: rgba(0, 0, 0, 0.596);
+}
+
+.fa-check {
+    color: green;
+}
+
+.disable {
+    display: none;
+}
