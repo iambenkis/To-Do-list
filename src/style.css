@@ -19,13 +19,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 15%;
+    margin-top: 11%;
 }
 
 .todo-box {
     background-color: #fff;
     width: 45%;
     position: relative;
+    box-shadow: 10px 10px 15px rgba(34, 34, 34, 0.397);
 }
 
 .todo-header { 
@@ -80,8 +81,24 @@ main {
 
 .fa-check {
     color: green;
+    display: none;
 }
 
-.disable {
+.checkbox {
     display: none;
+}
+
+.delete {
+    width: 100%; 
+    padding: 1rem;
+    background-color: rgb(75, 25, 141);
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    transition: 1s;
+}
+
+.delete:hover {
+    text-decoration: underline;
 }
