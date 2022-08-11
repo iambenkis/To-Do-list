@@ -18,8 +18,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 9%;
-  padding-bottom: 1rem;
+  margin: 9% auto; 
 }
 
 .todo-box {
