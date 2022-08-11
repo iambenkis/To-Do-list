@@ -1,56 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do list
 
-> Description the project.
+> The todo list lists everything that you have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom using a corresponding index of each task. The project is build with HTML,CSS and Javascript.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Html
+- Csss
+- Js
+- Technologies used: webpack, Git, Github
 
 ## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get the project locally , run ```git clone https://github.com/iambenkis/To-Do-list.git```
 
 ### Prerequisites
 
-### Setup
+``` node and npm ```
 
 ### Install
 
+Install webpack with npm :
+
+```bash
+npm install --save-dev webpack
+```
+
 ### Usage
+
+- To get the configuration of the app: Run ```npm install```
+- To launch the app locally: Run ```npm start```
 
 ### Run tests
 
-### Deployment
-
-
-
 ## Authors
 
-👤 **Author1**
+👤  **Benjamin Kisenge**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+* GitHub: [@benjamin kisenge](https://github.com/iambenkis)
+* Twitter: [@benjamin kisenge](https://twitter.com/iambenkis)
+* LinkedIn: [benjamin kisenge](https://www.linkedin.com/in/ben-kisenge/)
 
 ## 🤝 Contributing
 
