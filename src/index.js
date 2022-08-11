@@ -35,18 +35,25 @@ const displayTasks = (arr) => {
   arr.map((task) => taskContainer.insertAdjacentHTML('afterbegin', taskTemplate(task.description)));
 };
 
+const addFunction = () => {
+  if(taskEntered.value !== '') {
+    Tasks.unshift({
+      description: taskEntered.value,
+      completed: false,
+      index: Tasks.length + 1,
+    })
+    taskContainer.innerHTML = '';
+    displayTasks(Tasks); 
+    taskEntered.value = '';
+  }
+}
+
 const addTask = () => {
   submitTask.addEventListener('click', (e) => {
-    if(taskEntered.value !== '') {
-      Tasks.unshift({
-        description: taskEntered.value,
-        completed: false,
-        index: Tasks.length + 1,
-      })
-      taskContainer.innerHTML = '';
-      displayTasks(Tasks); 
-      taskEntered.value = '';
-    }
+    addFunction();
+  })
+  document.querySelector('form').addEventListener('submit', (e) => {
+    addFunction();
   })
 };
 
