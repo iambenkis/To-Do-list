@@ -72,7 +72,7 @@ main {
 
 .task label {
   color: rgb(54, 54, 54);
-  margin-left: .7rem;
+  margin-left: 0.7rem;
 }
 
 .task i,

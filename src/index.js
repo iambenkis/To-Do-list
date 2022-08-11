@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+
 const Tasks = [
   {
     description: "Drag 'n drop to reorder your list",
@@ -16,7 +17,7 @@ const Tasks = [
     index: 2,
   },
 ];
-const taskContainer = document.querySelector('.task-container'); 
+const taskContainer = document.querySelector('.task-container');
 const taskTemplate = (task) => `
     <div class="task">
         <div class="t-left">
