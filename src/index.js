@@ -20,6 +20,7 @@ const Tasks = [
 const taskContainer = document.querySelector('.task-container');
 const taskEntered = document.querySelector('.in-task');
 const submitTask = document.querySelector('.fa-left-long');
+const deleteBtn  = document.querySelector('.delete');
 const taskTemplate = (task) => `
     <div class="task">
         <div class="t-left">
