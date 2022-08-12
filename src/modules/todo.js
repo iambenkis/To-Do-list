@@ -20,7 +20,8 @@ export default class myTodo {
       this.tasks.forEach((task) => {
         if (task.index === Number(id)) {
           this.tasks
-            .splice(task.index - 1, 1);
+            .splice(task.index - 1, 1); 
+            this.resetIndex();// Update of indexes after deleting
         }
       });
     }
@@ -40,8 +41,16 @@ export default class myTodo {
     taskTemplate = (task) => `
         <div class="task">
             <div class="t-left" id=${task.index}>
-                <input type="checkbox" name="Drag" class='checkbox' ${task.completed ? 'checked' : ''} id=${task.index}> 
-                <label for="" class=${task.completed ? 'line task-label' : 'task-label'}>${task.description}</label>
+                <input 
+                    type="checkbox" 
+                    name="Drag" 
+                    class='checkbox' ${task.completed ? 'checked' : ''} 
+                    id=${task.index}> 
+                <input 
+                    type="text" 
+                    id="${task.index}" 
+                    class=${task.completed ? 'line task-label' : 'task-label'} 
+                    value="${task.description}">
             </div>
             <p class="deleteTask" id=${task.index}>Delete</p> 
         </div>`;
@@ -86,9 +95,19 @@ export default class myTodo {
           this.setStorage();
           taskContainer.innerHTML = '';
           this.displayTasks(this.tasks);
+          console.log(this.tasks)
         });
       });
-    }
+      //Editing task function 
+      taskLabel.forEach((textarea) => {
+        textarea.addEventListener('change', () => {
+            console.log(textarea.value)
+        const result = this.tasks.filter((task) => task.index === Number(textarea.id));
+        this.tasks[result[0].index - 1].description = textarea.value;
+        this.setStorage();
+      });
+    });
+}
 
     setStorage = () => {
       const formData = JSON.stringify(this.tasks);
