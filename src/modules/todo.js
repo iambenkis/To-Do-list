@@ -64,6 +64,7 @@ export default class MyTodo {
               }
               return task;
             });
+            this.setStorage();
           } else {
             taskLabel[id]?.classList.remove('line');
             this.tasks = this.tasks.map((task) => {
@@ -72,6 +73,7 @@ export default class MyTodo {
               }
               return task;
             });
+            this.setStorage();
           }
         });
       });
