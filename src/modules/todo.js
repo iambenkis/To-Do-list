@@ -10,9 +10,9 @@ export default class myTodo {
             description,
             completed : false,
             index : this.tasks.length + 1
-        }
-        //nthis.resetIndex();
+        } 
         this.tasks.push(myTask);
+        this.setStorage();
     }
     remove = (id) => {
         this.resetIndex ();
@@ -45,6 +45,8 @@ export default class myTodo {
         </div>`;
 
     displayTasks = () => {
+        this.getStorage();
+        taskContainer.innerHTML = '';
         this.tasks 
         .forEach((task) => taskContainer.insertAdjacentHTML('beforeend', this.taskTemplate(task)));
         const checkboxes = document.querySelectorAll('.checkbox');
@@ -65,8 +67,7 @@ export default class myTodo {
                 this.tasks = this.tasks.map(task => {
                     if(task.index === parseInt(checkbox.parentElement.id,10)){
                         task.completed = false;
-                    }
-                    //console.log(task, "unchecked")
+                    } 
                     return  task;
                 });  
             }
@@ -74,11 +75,12 @@ export default class myTodo {
         });
 
          let deleteBtn = document.querySelectorAll('.deleteTask');
-         deleteBtn.forEach((btn,index) => {
+         deleteBtn.forEach((btn) => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const id = e.currentTarget.id;
                 this.remove(id);
+                this.setStorage();
                 taskContainer.innerHTML = '';
                 this.displayTasks(this.tasks); 
             });
