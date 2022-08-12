@@ -18,7 +18,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 9% auto; 
+  margin: 9% auto;
 }
 
 .todo-box {
@@ -109,11 +109,12 @@ main {
 .delete:hover {
   text-decoration: underline;
 }
+
 .task p {
   background-color: rgb(165, 165, 165);
-  padding: .2rem 1rem ;
+  padding: 0.2rem 1rem;
   border-radius: 20px;
   color: rgb(255, 255, 255);
-  font-size: .7rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
