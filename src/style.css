@@ -85,6 +85,8 @@ main {
 .task .line {
   text-decoration: line-through;
   text-decoration-color: rgba(0, 0, 0, 0.596);
+  outline: none;
+  border: none;
 }
 
 .fa-check {
