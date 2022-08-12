@@ -20,8 +20,8 @@ export default class myTodo {
       this.tasks.forEach((task) => {
         if (task.index === Number(id)) {
           this.tasks
-            .splice(task.index - 1, 1); 
-            this.resetIndex();// Update of indexes after deleting
+            .splice(task.index - 1, 1);
+          this.resetIndex();// Update of indexes after deleting
         }
       });
     }
@@ -95,19 +95,17 @@ export default class myTodo {
           this.setStorage();
           taskContainer.innerHTML = '';
           this.displayTasks(this.tasks);
-          console.log(this.tasks)
         });
       });
-      //Editing task function 
+      // Editing task function
       taskLabel.forEach((textarea) => {
         textarea.addEventListener('change', () => {
-            console.log(textarea.value)
-        const result = this.tasks.filter((task) => task.index === Number(textarea.id));
-        this.tasks[result[0].index - 1].description = textarea.value;
-        this.setStorage();
+          const result = this.tasks.filter((task) => task.index === Number(textarea.id));
+          this.tasks[result[0].index - 1].description = textarea.value;
+          this.setStorage();
+        });
       });
-    });
-}
+    }
 
     setStorage = () => {
       const formData = JSON.stringify(this.tasks);
