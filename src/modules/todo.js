@@ -15,11 +15,11 @@ export default class myTodo {
         this.tasks.push(myTask);
     }
     remove = (id) => {
-        this.tasks.forEach((task) => {
-            if(task.index === id + 1) {
+        this.resetIndex ();
+        this.tasks.forEach((task) => { 
+            if(task.index === Number(id)) { 
                 this.tasks 
-                .splice(this.tasks[id],1);
-                console.log('in');
+                .splice(task.index - 1,1);
             }
         });
     }
@@ -51,14 +51,12 @@ export default class myTodo {
         const taskLabel = taskContainer.querySelectorAll('.task-label');
         checkboxes.forEach((checkbox,id) => {
             checkbox.addEventListener('change', () => {
-            if (checkbox.checked) { 
-                console.log(taskLabel, "checked ", id)
+            if (checkbox.checked) {  
                 taskLabel[id]?.classList.add('line'); 
                 this.tasks = this.tasks.map((task) => {
                     if(task.index === parseInt(checkbox.parentElement.id,10)){
                         task.completed = true; 
-                    }
-                   // console.log(taskLabel, "checked ", id)
+                    } 
                    return task;
                     
                 });  
@@ -80,10 +78,9 @@ export default class myTodo {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const id = e.currentTarget.id;
-                this.remove(index);
+                this.remove(id);
                 taskContainer.innerHTML = '';
-                this.displayTasks(this.tasks);
-                console.log('deleted',index , id);
+                this.displayTasks(this.tasks); 
             });
         });
         
