@@ -97,7 +97,7 @@ main {
 .delete {
   width: 100%;
   padding: 1rem;
-  background-color: rgb(75, 25, 141);
+  background-color: rgb(80, 80, 80);
   color: #fff;
   font-weight: 600;
   outline: none;
@@ -110,10 +110,10 @@ main {
   text-decoration: underline;
 }
 .task p {
-  background-color: rgb(177, 51, 51);
+  background-color: rgb(165, 165, 165);
   padding: .2rem 1rem ;
   border-radius: 20px;
-  color: rgb(211, 211, 211);
+  color: rgb(255, 255, 255);
   font-size: .7rem;
   cursor: pointer;
 }
