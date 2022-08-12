@@ -35,7 +35,7 @@ export default class MyTodo {
 
     cleanCompleted = () => {
       this.tasks = this.tasks.filter((task) => task.completed === false);
-      this.setStorage(); 
+      this.setStorage();
     }
 
     taskTemplate = (task) => `

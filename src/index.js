@@ -28,6 +28,6 @@ form.addEventListener('submit', (e) => {
 });
 
 deleteTaskes.addEventListener('click', () => {
-   todoList.cleanCompleted();  
-   todoList.displayTasks();
-})
+  todoList.cleanCompleted();
+  todoList.displayTasks();
+});
