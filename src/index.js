@@ -1,34 +1,28 @@
 import './style.css';
+import MyTodo from './modules/todo.js';
 
-const Tasks = [
-  {
-    description: "Drag 'n drop to reorder your list",
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Manage all your lists in one place',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Resync to clear out the old',
-    completed: false,
-    index: 2,
-  },
-];
 const taskContainer = document.querySelector('.task-container');
-const taskTemplate = (task) => `
-    <div class="task">
-        <div class="t-left">
-            <input type="checkbox" name="Drag" class="checkbox"> 
-            <label for="">${task}</label>
-        </div>
-        <i class="fa-solid fa-ellipsis-vertical"></i> 
-    </div>
-`;
-const displayTasks = (arr) => {
-  arr.sort((a, b) => b.index - a.index);
-  arr.map((task) => taskContainer.insertAdjacentHTML('afterbegin', taskTemplate(task.description)));
+const taskEntered = document.querySelector('.in-task');
+const submitTask = document.querySelector('.fa-left-long');
+const form = document.querySelector('form');
+
+const todoList = new MyTodo();
+todoList.displayTasks();
+
+const confirmInput = () => {
+  if (taskEntered.value.trim()) {
+    todoList.addTask(taskEntered.value);
+    taskEntered.value = '';
+    taskContainer.innerHTML = '';
+    todoList.displayTasks();
+  }
 };
-displayTasks(Tasks);
+submitTask.addEventListener('click', (e) => {
+  e.preventDefault();
+  confirmInput();
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  confirmInput();
+});
