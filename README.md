@@ -33,8 +33,8 @@ npm install --save-dev webpack
 
 ### Usage
 
-To get the configuration of the app: Run ```npm install```
-To launch the app locally: Run ```npm start```
+- To get the configuration of the app: Run ```npm install```
+- To launch the app locally: Run ```npm start```
 
 ### Run tests
 
