@@ -90,14 +90,14 @@ export default class MyTodo {
           this.displayTasks(this.tasks);
         });
       });
-    // Editing task function
-    taskLabel.forEach((textarea) => {
+      // Editing task function
+      taskLabel.forEach((textarea) => {
         textarea.addEventListener('change', () => {
-            const result = this.tasks.filter((task) => task.index === Number(textarea.id));
-            this.tasks[result[0].index - 1].description = textarea.value;
-            this.setStorage();
+          const result = this.tasks.filter((task) => task.index === Number(textarea.id));
+          this.tasks[result[0].index - 1].description = textarea.value;
+          this.setStorage();
         });
-        });
+      });
     }
 
     setStorage = () => {
