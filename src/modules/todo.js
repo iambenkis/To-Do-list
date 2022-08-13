@@ -21,6 +21,7 @@ export default class MyTodo {
         if (task.index === Number(id)) {
           this.tasks
             .splice(task.index - 1, 1);
+          this.resetIndex();// Update of indexes after deleting
         }
       });
     }
