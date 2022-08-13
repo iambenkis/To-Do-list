@@ -70,9 +70,11 @@ main {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.task label {
+.task .task-label {
   color: rgb(54, 54, 54);
   margin-left: 0.7rem;
+  border: none;
+  outline: none;
 }
 
 .task i,
