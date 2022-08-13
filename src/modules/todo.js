@@ -42,8 +42,16 @@ export default class MyTodo {
     taskTemplate = (task) => `
         <div class="task">
             <div class="t-left" id=${task.index}>
-                <input type="checkbox" name="Drag" class='checkbox' ${task.completed ? 'checked' : ''} id=${task.index}> 
-                <label for="" class=${task.completed ? 'line task-label' : 'task-label'}>${task.description}</label>
+                <input 
+                    type="checkbox" 
+                    name="Drag" 
+                    class='checkbox' ${task.completed ? 'checked' : ''} 
+                    id=${task.index}> 
+                <input 
+                    type="text" 
+                    id="${task.index}" 
+                    class=${task.completed ? 'line task-label' : 'task-label'} 
+                    value="${task.description}">
             </div>
             <p class="deleteTask" id=${task.index}>Delete</p> 
         </div>`;
