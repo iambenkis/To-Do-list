@@ -1,6 +1,6 @@
 const taskContainer = document.querySelector('.task-container');
 
-export default class myTodo {
+export default class MyTodo {
   constructor() {
     this.tasks = [];
   }
@@ -36,6 +36,7 @@ export default class myTodo {
 
     cleanCompleted = () => {
       this.tasks = this.tasks.filter((task) => task.completed === false);
+      this.setStorage();
     }
 
     taskTemplate = (task) => `

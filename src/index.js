@@ -5,7 +5,7 @@ const taskContainer = document.querySelector('.task-container');
 const taskEntered = document.querySelector('.in-task');
 const submitTask = document.querySelector('.fa-left-long');
 const form = document.querySelector('form');
-
+const deleteTaskes = document.querySelector('.delete');
 const todoList = new MyTodo();
 todoList.displayTasks();
 
@@ -25,4 +25,9 @@ submitTask.addEventListener('click', (e) => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   confirmInput();
+});
+
+deleteTaskes.addEventListener('click', () => {
+  todoList.cleanCompleted();
+  todoList.displayTasks();
 });
