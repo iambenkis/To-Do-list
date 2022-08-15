@@ -45,13 +45,13 @@ npm install
 ### Run tests
 
 - To update changes : Run 
-                           ```bash 
-                            npm run build
-                           ```
+```bash 
+npm run build
+```
 - To launch the app locally: Run 
-                            ```bash 
-                               npm start
-                            ```
+```bash 
+    npm start
+```
 
 ## Authors
 
