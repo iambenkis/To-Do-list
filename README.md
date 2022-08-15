@@ -18,9 +18,9 @@
 ## Getting Started
 
 To get the project locally , run 
-                                ```bash 
-                                    git clone https://github.com/iambenkis/To-Do-list.git
-                                ```
+```bash 
+git clone https://github.com/iambenkis/To-Do-list.git
+```
 
 ### Prerequisites
 
