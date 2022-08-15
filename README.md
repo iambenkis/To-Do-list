@@ -18,7 +18,7 @@
 ## Getting Started
 
 To get the project locally , run 
-                                ``` bash 
+                                ```bash 
                                     git clone https://github.com/iambenkis/To-Do-list.git
                                 ```
 
@@ -50,7 +50,7 @@ npm install
                            ```
 - To launch the app locally: Run 
                             ```bash 
-                            npm start
+                               npm start
                             ```
 
 ## Authors
