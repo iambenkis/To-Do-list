@@ -17,15 +17,15 @@
 
 ## Getting Started
 
-To get the project locally , run 
-```bash 
+To get the project locally , run
+```bash
 git clone https://github.com/iambenkis/To-Do-list.git
 ```
 
 ### Prerequisites
 
-- node
-- npm
+- Node
+- NPM
 
 ### Install
 
@@ -37,19 +37,19 @@ npm install --save-dev webpack
 
 ### Usage
 
-- To get the configuration of the app: Run 
+- To get the configuration of the app: Run
 ```bash
 npm install
 ```
 
 ### Run tests
 
-- To update changes : Run 
-```bash 
+- To update changes : Run
+```bash
 npm run build
 ```
-- To launch the app locally: Run 
-```bash 
+- To launch the app locally: Run
+```bash
     npm start
 ```
 
